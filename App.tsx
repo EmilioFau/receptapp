@@ -2,19 +2,31 @@ import { NavigationContainer }  from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailsScreen';
+import { RootStackParamList } from './navigation/types';
 
-const Stack = createNativeStackNavigator();
-type RootStackParamList = {
-  Home: undefined;
-  Details: undefined;
-};
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
 export default function App() {
   
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} 
+        options={{ 
+          title: 'Recept App',
+          headerStyle: { backgroundColor: '#E8DFCA' },
+          headerTintColor: '#6D94C5',
+          headerTitleStyle: { fontWeight: 'bold' },
+         }}
+        />
+        <Stack.Screen name="Details" component={DetailsScreen} 
+        options={{ 
+          title: 'Detaljer',
+          headerStyle: { backgroundColor: '#E8DFCA' },
+          headerTintColor: '#6D94C5',
+          headerTitleStyle: { fontWeight: 'bold' },
+         }}
+        />
       </Stack.Navigator>
     </NavigationContainer> 
   );

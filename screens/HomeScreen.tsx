@@ -3,6 +3,7 @@ import RecipeCard from "../components/RecipeCard";
 import { mockRecipes } from "../data/mockedRecipes";
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
+import { styles } from "../styles";
 
 
 export default function HomeScreen({ navigation }: { navigation: NativeStackNavigationProp<RootStackParamList, 'Home'> }) {
@@ -16,7 +17,7 @@ export default function HomeScreen({ navigation }: { navigation: NativeStackNavi
             data={recipes}
             renderItem={({ item }) => {
               return(
-                <RecipeCard key={item.id} {...item} />
+                <RecipeCard key={item.id} recipe={item} navigation={navigation} />
               );
             }}
             ListHeaderComponent={
@@ -29,18 +30,3 @@ export default function HomeScreen({ navigation }: { navigation: NativeStackNavi
     </View>
   );
 }
-
-    const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 10,
-  },
-  scrollView: {
-    paddingHorizontal: 16,
-  },
-  headerText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
