@@ -74,4 +74,61 @@ export const styles = StyleSheet.create({
   infoContainer: {
     marginVertical: 8,
   },
+  headerContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 16,
+  },
+  searchButton: {
+    paddingTop: 8,
+  },
+  searchButtonText: {
+    color: "#6D94C5",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.4)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalContainer: {
+    width: "85%",
+    backgroundColor: "#F5F7FA",
+    borderRadius: 20,
+    padding: 24,
+    shadowColor: "#9F86C0",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 8,
+    alignItems: "center",
+  },
+  modalTitle: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#6D94C5",
+    marginBottom: 12,
+  },
+  modalText: {
+    fontSize: 16,
+    color: "#6D94C5",
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  modalButton: {
+    backgroundColor: "#ffd864ff",
+    borderRadius: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 28,
+    marginTop: 8,
+  },
+  modalButtonText: {
+    color: "#22223B",
+    fontWeight: "bold",
+    fontSize: 16,
+    textAlign: "center",
+  },
 });
