@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView } from "react-native";
 import { Recipe } from "../types/Recipe";
 import { styles } from "../styles";
 

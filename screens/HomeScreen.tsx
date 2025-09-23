@@ -1,4 +1,4 @@
-import { FlatList, View, Text, StyleSheet, Pressable } from "react-native";
+import { FlatList, View, Text, Pressable } from "react-native";
 import RecipeCard from "../components/RecipeCard";
 import { mockRecipes } from "../data/mockedRecipes";
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -6,6 +6,7 @@ import type { RootStackParamList } from '../navigation/types';
 import { styles } from "../styles";
 import SearchModal from "../components/SearchModal";
 import { useState } from "react";
+import { StatusBar } from 'expo-status-bar';
 
 
 
@@ -20,6 +21,7 @@ export default function HomeScreen({ navigation }: { navigation: NativeStackNavi
 
   return (
  <View style={styles.container}>
+  <StatusBar style="auto" />
         <View style={styles.scrollView}>
           <FlatList
             data={recipes}

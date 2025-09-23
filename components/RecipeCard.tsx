@@ -3,6 +3,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
 import { Recipe } from '../types/Recipe';
 import { styles } from '../styles';
+import * as Haptics from 'expo-haptics';
 
 
 type RecipeCardProps = {
@@ -26,7 +27,12 @@ export default function RecipeCard({
 
     return (
         <View style={styles.card}>
-            <TouchableOpacity onPress={handlePress}>
+            <TouchableOpacity
+                    onPress={() => {
+                    Haptics.selectionAsync();
+                    handlePress();
+                }}
+                >
                 <Image
                     source={{ uri: recipe.imageUrl }}
                     style={{ width: '100%', height: 200, marginBottom: 8 }}
