@@ -88,6 +88,11 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
+  versionText: {
+    color: "#6D94C5",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
   modalOverlay: {
     flex: 1,
     justifyContent: "center",
